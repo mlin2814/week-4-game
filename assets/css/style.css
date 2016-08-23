@@ -1,0 +1,8 @@
+selection.button {
+    background:;
+    border: 0;
+    overflow: hidden;
+    text-indent: 500px;
+}
+
+<input type="button" class="button" onclick="your_function();" />

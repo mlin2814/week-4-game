@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Training!</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+<div id=".container">
+	<div>Instructions</div>
+		<h1>Crystal Gem Training Simulation</h1>
+		<h2>Do You Wish to Engage in Combat?</h2>
+			<p>In this RPG, you will train to protect Earth from Homeworld! The Gems will train with each other to make sure they're ready for Homeworld Gems.
+				You will select one Crystal Gem as your player, and the others will be your sparring partners. Each Gem has a certain amount of attack power and HP. Your goal is to beat the other Gems and come out victorious! Your attacks get progressively stronger, but your HP will decrease with every blow. Don't worry, you'll be able to regenerate if your gem takes too much damage. Except for Steven. No one knows what will happen, and that's why he'll be watching on the sidelines with Connie and Greg. Sorry.
+			</p>
+		<h3>Let the training commence!</h3>
+
+	<!-- Player positions -->
+	<div>
+		<div id="selection">Select Character</div>
+			<img src="assets/images/Attack_the_Light_Garnet.png" alt="" class="garnet" style="position:relative; top:10px; height: 300px">
+			<img src="assets/images/Attack_the_Light_Amethyst.png" alt="" class="img amethyst" style="position:relative; top:10px; height: 300px">
+			<img src="assets/images/Attack_the_Light_Pearl.png" alt="" class="img pearl" style="position:relative; top:10px; height: 300px">
+			<img src="assets/images/tumblr_inline_nrpqs8cp4A1rsvwz7_500.gif" alt="" class="img peridot" style="position:relative; top:10px; height: 300px">
+			<img src="assets/images/429516_gatekid3_lapis-lazuli-sprite.gif" alt="" class="img lapis" style="position:relative; top:10px; height: 300px">
+		<div id="player">Your Gem</div>
+		<div id="choices">Sparring Gems</div>
+		<div id="opponent">Opposing Gem</div>
+	</div>
+</div>
+
+
+</body>
+
+<script type="text/javascript">
+	var avatars = ["Garnet","Amethyst", "Pearl", "Peridot", "Lapis"];
+	$(document).ready(function(){
+		var Garnet = {attack:"50", hp:"250"};
+		var Amethyst = {attack:"35", hp:"175"};
+		var Pearl = {attack:"40", hp:"200"};
+		var Peridot = {attack:"30", hp:"175"};
+		var Lapis = {attack:"45", hp:"225"};
+		var player
+		var enemy 
+
+		//selecting character
+		//how to make the player choice into a new var
+		$(".selectButton").click(function(){
+				$(".garnet").animate({top:"+=200px"}, "normal");
+		});
+		$(".selectButton").on("click", function(){
+				$(".amethyst").animate({top:"+=200px"}, "normal");
+		});
+		$(".selectButton").on("click", function(){
+				$(".pearl").animate({top:"+=200px"}, "normal");
+		});
+		$(".selectButton").on("click", function(){
+				$(".peridot").animate({top:"+=200px"}, "normal");
+		});
+		$(".selectButton").on("click", function(){
+				$(".lapis").animate({top:"+=200px"}, "normal");
+		});
+
+		//moving player choice
+		//ask about append
+		 $('#player').appendTo($('#selection') );
+
+
+
+	})
+
+</script>
+</html>
