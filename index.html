@@ -18,18 +18,68 @@
 
 	<!-- Player positions -->
 	<div>
-		<div id="selection">Select Character</div>
-			<img src="assets/images/Attack_the_Light_Garnet.png" alt="" class="garnet" style="position:relative; top:10px; height: 300px">
+		<div class="row" id="selection">Select Character
+			<div class="col-md-3" id="roster">
+					<div class ='character' id = 'garnet'>
+						<h1 class='name'>&nbsp </h1>
+						<h1 class ='hp'>&nbsp HP: 250</h1>
+						<img class='img responsive' src = "assets/images/Attack_the_Light_Garnet.png" style="width: 400px; height: 400px;">
+					</div>
+
+					<div class ='character' id = 'amethyst'> 
+						<h1 class='name'>&nbsp </h1>
+						<h1 class ='hp'>&nbsp HP: 175</h1>
+						<img class='img responsive' src = "assets/images/Attack_the_Light_Amethyst.png" style="width: 400px; height: 400px;">
+					</div>
+
+					<div class ='character' id = 'pearl'> 
+						<h1 class='name'>&nbsp </h1>
+						<h1 class ='hp'>&nbsp HP: 200</h1>
+						<img class='img responsive' src = "assets/images/Attack_the_Light_Pearl.png" style="width: 400px; height: 400px;">
+					</div>
+
+					<div class ='character' id = 'peridot'> 
+						<h1 class='name'>&nbsp </h1>
+						<h1 class ='hp'>&nbsp HP: 175</h1>
+						<img class='img responsive' src = "assets/images/tumblr_inline_nrpqs8cp4A1rsvwz7_500.gif" style="width: 300px; height: 400px;">
+					</div>
+
+					<div class ='character' id = 'lapis'> 
+						<h1 class='name'>&nbsp </h1>
+						<h1 class ='hp'>&nbsp HP: 225</h1>
+						<img class='img responsive' src = "assets/images/429516_gatekid3_lapis-lazuli-sprite.gif" style="width: 400px; height: 400px;">
+					</div>
+			</div>
+			<div class="col-md-6" id="arena">
+				<div class="row" id="character-row">
+						<div class="col-md-3" id="player"></div>
+
+						<div class="col-md-6" id="conference"></div>
+
+						<div class="col-md-3" id="challenger"></div>
+				</div>
+			</div>
+			<div class="row text-center" id="button-row">
+				<button id="attack-button" class="btn">Attack!</button>
+
+				<button id="new-game" class="btn">New Game!</button>
+			</div>
+
+			<div class="row" id="text-row">
+				<div id="text-area" class="text-center"><p>Choose your Gem!</p></div>
+			</div>
+			<div class="col-md-3" id="challengers"></div>
+		</div>
+			<!-- <img src="assets/images/Attack_the_Light_Garnet.png" alt="" class="garnet" style="position:relative; top:10px; height: 300px">
 			<img src="assets/images/Attack_the_Light_Amethyst.png" alt="" class="img amethyst" style="position:relative; top:10px; height: 300px">
 			<img src="assets/images/Attack_the_Light_Pearl.png" alt="" class="img pearl" style="position:relative; top:10px; height: 300px">
 			<img src="assets/images/tumblr_inline_nrpqs8cp4A1rsvwz7_500.gif" alt="" class="img peridot" style="position:relative; top:10px; height: 300px">
-			<img src="assets/images/429516_gatekid3_lapis-lazuli-sprite.gif" alt="" class="img lapis" style="position:relative; top:10px; height: 300px">
+			<img src="assets/images/429516_gatekid3_lapis-lazuli-sprite.gif" alt="" class="img lapis" style="position:relative; top:10px; height: 300px"> -->
 		<div id="player">Your Gem</div>
 		<div id="choices">Sparring Gems</div>
 		<div id="opponent">Opposing Gem</div>
 	</div>
 </div>
-
 
 </body>
 
@@ -65,6 +115,11 @@
 		//moving player choice
 		//ask about append
 		 $('#player').appendTo($('#selection') );
+
+		 //attack mechanics
+		 if (playerchoice) {
+
+		 }
 
 
 
