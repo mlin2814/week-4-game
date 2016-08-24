@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Training!</title>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
@@ -16,39 +17,36 @@
 			</p>
 		<h3>Let the training commence!</h3>
 
+
 	<!-- Player positions -->
 	<div>
 		<div class="row" id="selection">Select Character
-			<div class="col-md-3" id="roster">
-					<div class ='character' id = 'garnet'>
-						<h1 class='name'>&nbsp </h1>
-						<h1 class ='hp'>&nbsp HP: 250</h1>
-						<img class='img responsive' src = "assets/images/Attack_the_Light_Garnet.png" style="width: 400px; height: 400px;">
-					</div>
-
-					<div class ='character' id = 'amethyst'> 
-						<h1 class='name'>&nbsp </h1>
-						<h1 class ='hp'>&nbsp HP: 175</h1>
-						<img class='img responsive' src = "assets/images/Attack_the_Light_Amethyst.png" style="width: 400px; height: 400px;">
-					</div>
-
-					<div class ='character' id = 'pearl'> 
-						<h1 class='name'>&nbsp </h1>
-						<h1 class ='hp'>&nbsp HP: 200</h1>
-						<img class='img responsive' src = "assets/images/Attack_the_Light_Pearl.png" style="width: 400px; height: 400px;">
-					</div>
-
-					<div class ='character' id = 'peridot'> 
-						<h1 class='name'>&nbsp </h1>
-						<h1 class ='hp'>&nbsp HP: 175</h1>
-						<img class='img responsive' src = "assets/images/tumblr_inline_nrpqs8cp4A1rsvwz7_500.gif" style="width: 300px; height: 400px;">
-					</div>
-
-					<div class ='character' id = 'lapis'> 
-						<h1 class='name'>&nbsp </h1>
-						<h1 class ='hp'>&nbsp HP: 225</h1>
-						<img class='img responsive' src = "assets/images/429516_gatekid3_lapis-lazuli-sprite.gif" style="width: 400px; height: 400px;">
-					</div>
+			<div class="col-md-3" id="avatars" align="center">
+				<div class ='character' id = 'garnet'>
+					<h1 class='name'>&nbsp Garnet</h1>
+					<h1 class ='hp'>&nbsp HP: 250</h1>
+					<img class='img responsive clickable' src = "assets/images/Attack_the_Light_Garnet.png" style="width: 200px; height: 200px;">
+				</div>
+				<div class ='character' id = 'amethyst'>
+					<h1 class='name'>&nbsp Amethyst</h1>
+					<h1 class ='hp'>&nbsp HP: 175</h1>
+					<img class='img responsive clickable' src = "assets/images/Attack_the_Light_Amethyst.png" style="width: 200px; height: 200px;">
+				</div>
+				<div class ='character' id = 'pearl'> 
+					<h1 class='name'>&nbsp Pearl</h1>
+					<h1 class ='hp'>&nbsp HP: 200</h1>
+					<img class='img responsive clickable' src = "assets/images/Attack_the_Light_Pearl.png" style="width: 200px; height: 200px;">
+				</div>
+				<div class ='character' id = 'peridot'> 
+					<h1 class='name'>&nbsp Peridot</h1>
+					<h1 class ='hp'>&nbsp HP: 175</h1>
+					<img class='img responsive clickable' src = "assets/images/tumblr_inline_nrpqs8cp4A1rsvwz7_500.gif" style="width: 150px; height: 200px;">
+				</div>
+				<div class ='character' id = 'lapis'> 
+					<h1 class='name'>&nbsp Lapis</h1>
+					<h1 class ='hp'>&nbsp HP: 225</h1>
+					<img class='img responsive clickable' src = "assets/images/429516_gatekid3_lapis-lazuli-sprite.gif" style="width: 200px; height: 200px;">
+				</div>
 			</div>
 			<div class="col-md-6" id="arena">
 				<div class="row" id="character-row">
@@ -70,11 +68,8 @@
 			</div>
 			<div class="col-md-3" id="challengers"></div>
 		</div>
-			<!-- <img src="assets/images/Attack_the_Light_Garnet.png" alt="" class="garnet" style="position:relative; top:10px; height: 300px">
-			<img src="assets/images/Attack_the_Light_Amethyst.png" alt="" class="img amethyst" style="position:relative; top:10px; height: 300px">
-			<img src="assets/images/Attack_the_Light_Pearl.png" alt="" class="img pearl" style="position:relative; top:10px; height: 300px">
-			<img src="assets/images/tumblr_inline_nrpqs8cp4A1rsvwz7_500.gif" alt="" class="img peridot" style="position:relative; top:10px; height: 300px">
-			<img src="assets/images/429516_gatekid3_lapis-lazuli-sprite.gif" alt="" class="img lapis" style="position:relative; top:10px; height: 300px"> -->
+						<img src="assets/images/Tumblr_nu715a2caK1smn4pqo3_1280.png", z>
+
 		<div id="player">Your Gem</div>
 		<div id="choices">Sparring Gems</div>
 		<div id="opponent">Opposing Gem</div>
@@ -84,32 +79,22 @@
 </body>
 
 <script type="text/javascript">
-	var avatars = ["Garnet","Amethyst", "Pearl", "Peridot", "Lapis"];
+	
 	$(document).ready(function(){
-		var Garnet = {attack:"50", hp:"250"};
-		var Amethyst = {attack:"35", hp:"175"};
-		var Pearl = {attack:"40", hp:"200"};
-		var Peridot = {attack:"30", hp:"175"};
-		var Lapis = {attack:"45", hp:"225"};
-		var player
-		var enemy 
+		var avatars = [
+		{name: "Garnet", attack:50, hp:250},
+		{name: "Amethyst", attack:35, hp:175},
+		{name: "Pearl", attack:40, hp:200},
+		{name: "Peridot", attack:30, hp:175},
+		{name: "Lapis", attack:45, hp:225},
+		];
 
 		//selecting character
 		//how to make the player choice into a new var
-		$(".selectButton").click(function(){
-				$(".garnet").animate({top:"+=200px"}, "normal");
-		});
-		$(".selectButton").on("click", function(){
-				$(".amethyst").animate({top:"+=200px"}, "normal");
-		});
-		$(".selectButton").on("click", function(){
-				$(".pearl").animate({top:"+=200px"}, "normal");
-		});
-		$(".selectButton").on("click", function(){
-				$(".peridot").animate({top:"+=200px"}, "normal");
-		});
-		$(".selectButton").on("click", function(){
-				$(".lapis").animate({top:"+=200px"}, "normal");
+		$(".clickable").click(function(){
+			console.log($(this));
+				$(this).css({'right': '', 'left': '0px'}).animate({'left': '300px'});
+
 		});
 
 		//moving player choice
@@ -117,7 +102,7 @@
 		 $('#player').appendTo($('#selection') );
 
 		 //attack mechanics
-		 if (playerchoice) {
+		 for (i=0; i<avatars.length; i++) {
 
 		 }
 
