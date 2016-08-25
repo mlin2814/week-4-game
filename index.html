@@ -20,59 +20,69 @@
 
 	<!-- Player positions -->
 	<div>
-		<div class="row" id="selection">Select Character
-			<div class="col-md-3" id="avatars" align="center">
-				<div class ='character' id = 'garnet'>
-					<h1 class='name'>&nbsp Garnet</h1>
-					<h1 class ='hp'>&nbsp HP: 250</h1>
-					<img class='img responsive clickable' src = "assets/images/Attack_the_Light_Garnet.png" style="width: 200px; height: 200px;">
+		<div id="background">
+			<div class="row" id="selection">Select Character
+				<div class="col-md-3" id="avatars" align="center">
+					<div class ='character' id = 'garnet'>
+						<h1 class='name'>&nbsp Garnet</h1>
+						<h1 class ='hp'>&nbsp HP: 250</h1>
+						<img class='img responsive clickable' src = "assets/images/Attack_the_Light_Garnet.png" style="width: 200px; height: 200px;">
+					</div>
+					<div class ='character' id = 'amethyst'>
+						<h1 class='name'>&nbsp Amethyst</h1>
+						<h1 class ='hp'>&nbsp HP: 175</h1>
+						<img class='img responsive clickable' src = "assets/images/Attack_the_Light_Amethyst.png" style="width: 200px; height: 200px;">
+					</div>
+					<div class ='character' id = 'pearl'> 
+						<h1 class='name'>&nbsp Pearl</h1>
+						<h1 class ='hp'>&nbsp HP: 200</h1>
+						<img class='img responsive clickable' src = "assets/images/Attack_the_Light_Pearl.png" style="width: 200px; height: 200px;">
+					</div>
+					<div class ='character' id = 'peridot'> 
+						<h1 class='name'>&nbsp Peridot</h1>
+						<h1 class ='hp'>&nbsp HP: 175</h1>
+						<img class='img responsive clickable' src = "assets/images/tumblr_inline_nrpqs8cp4A1rsvwz7_500.gif" style="width: 150px; height: 200px;">
+					</div>
+					<div class ='character' id = 'lapis'> 
+						<h1 class='name'>&nbsp Lapis</h1>
+						<h1 class ='hp'>&nbsp HP: 225</h1>
+						<img class='img responsive clickable' src = "assets/images/429516_gatekid3_lapis-lazuli-sprite.gif" style="width: 200px; height: 200px;">
+					</div>
 				</div>
-				<div class ='character' id = 'amethyst'>
-					<h1 class='name'>&nbsp Amethyst</h1>
-					<h1 class ='hp'>&nbsp HP: 175</h1>
-					<img class='img responsive clickable' src = "assets/images/Attack_the_Light_Amethyst.png" style="width: 200px; height: 200px;">
-				</div>
-				<div class ='character' id = 'pearl'> 
-					<h1 class='name'>&nbsp Pearl</h1>
-					<h1 class ='hp'>&nbsp HP: 200</h1>
-					<img class='img responsive clickable' src = "assets/images/Attack_the_Light_Pearl.png" style="width: 200px; height: 200px;">
-				</div>
-				<div class ='character' id = 'peridot'> 
-					<h1 class='name'>&nbsp Peridot</h1>
-					<h1 class ='hp'>&nbsp HP: 175</h1>
-					<img class='img responsive clickable' src = "assets/images/tumblr_inline_nrpqs8cp4A1rsvwz7_500.gif" style="width: 150px; height: 200px;">
-				</div>
-				<div class ='character' id = 'lapis'> 
-					<h1 class='name'>&nbsp Lapis</h1>
-					<h1 class ='hp'>&nbsp HP: 225</h1>
-					<img class='img responsive clickable' src = "assets/images/429516_gatekid3_lapis-lazuli-sprite.gif" style="width: 200px; height: 200px;">
-				</div>
-			</div>
-			<div class="col-md-6" id="arena">
-				<div class="row" id="character-row">
-						<div class="col-md-3" id="player"></div>
+				<div class="col-md-6" id="arena">
+					<div class="row" id="character-row">
+							<div class="col-md-3" id="playerChoice"></div>
 
-						<div class="col-md-6" id="conference"></div>
+							<div class="col-md-6" id="conference"></div>
 
-						<div class="col-md-3" id="challenger"></div>
+							<div class="col-md-3" id="challenger"></div>
+					</div>
 				</div>
-			</div>
-			<div class="row text-center" id="button-row">
-				<button id="attack-button" class="btn">Attack!</button>
+				<div class="row text-center" id="button-row" align="center">
+					<button id="attack-button" class="btn">Attack!</button>
 
-				<button id="new-game" class="btn">New Game!</button>
-			</div>
+					<button id="new-game" class="btn">New Game!</button>
+				</div>
 
-			<div class="row" id="text-row">
-				<div id="text-area" class="text-center"><p>Choose your Gem!</p></div>
+				<div class="row" id="text-row">
+					<div id="text-area" class="text-center"><p>Choose your Opponent!</p></div>
+				</div>
+				<div class="col-md-3" id="challengers"></div>
 			</div>
-			<div class="col-md-3" id="challengers"></div>
+			
+			<div id="player">Your Gem</div>
+
+			<div id="choices">Sparring Gems</div>
+			
+			<div id="opponent">Opposing Gem</div>
+
+			<div id="musicHolder">
+				<!-- Make an invisible audio tag (without controls, no autoplay) and preload it -->
+				<audio preload="auto" autoplay class="bgmusic" controls loop>
+				  <source src="assets/images/Steven _Universe_Dance_of_Swords.mp3" type="audio/mpeg">
+				</audio>
+			</div>
 		</div>
-						<img src="assets/images/Tumblr_nu715a2caK1smn4pqo3_1280.png", z>
-
-		<div id="player">Your Gem</div>
-		<div id="choices">Sparring Gems</div>
-		<div id="opponent">Opposing Gem</div>
 	</div>
 </div>
 
@@ -93,20 +103,22 @@
 		//how to make the player choice into a new var
 		$(".clickable").click(function(){
 			console.log($(this));
-				$(this).css({'right': '', 'left': '0px'}).animate({'left': '300px'});
-
+				$(this).append("#player");
 		});
+
 
 		//moving player choice
 		//ask about append
-		 $('#player').appendTo($('#selection') );
+		 $('#player').appendTo($('#selection'));
+
+
 
 		 //attack mechanics
 		 for (i=0; i<avatars.length; i++) {
 
 		 }
 
-
+		
 
 	})
 

@@ -20,4 +20,16 @@ selection.button {
     text-indent: 500px;
 }
 
+#background {
+    position: absolute;
+    width: 1536px;
+    align: center;
+    height: 704px;
+    margin-left: 192px;
+    margin-top: 50px;
+    background: url(Tumblr_nu715a2caK1smn4pqo3_1280.png);
+    border: 2px solid silver;
+}
+
+
 <input type="button" class="button" onclick="your_function();" />
