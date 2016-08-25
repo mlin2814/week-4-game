@@ -1,3 +1,19 @@
+h1 {
+    align: center;
+}
+
+h2 {
+    align: center;
+}
+
+h3 {
+    align: center;
+}
+
+p {
+    align: center;
+}
+
 .container {
 	position: relative
 }
@@ -22,7 +38,7 @@ selection.button {
 
 #background {
     position: absolute;
-    width: 1536px;
+    width: relative;
     align: center;
     height: 704px;
     margin-left: 192px;
